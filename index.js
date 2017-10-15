@@ -21,7 +21,7 @@ const totalBatteries = batteryBatches.reduce((agg, count) => {
   return (agg + count)
 }, 0)
 
-const wordCountMap = monologueLines.reduce(function(lineCount, line) {
+const wordCountMap = monologueLines.reduce((lineCount, line) => {
   if (line.split(" ").length in lineCount) {
     lineCount[`${line.split(" ").length}`]++
   } else {
